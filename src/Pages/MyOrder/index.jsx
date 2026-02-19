@@ -11,10 +11,10 @@ function MyOrder() {
   const orderItem = id ? order?.find((item) => item.id === id) : order?.at(-1);
 
   const orderDetails = [
-    { label: 'Date', value: orderItem?.date },
-    { label: 'Order ID', value: orderItem?.id },
-    { label: 'Total Products', value: orderItem?.totalProducts },
-    { label: 'Total Price', value: `$${orderItem?.totalPrice}` },
+    { label: 'Datos', value: orderItem?.date },
+    { label: 'ID orden', value: orderItem?.id },
+    { label: 'Total de productos', value: orderItem?.totalProducts },
+    { label: 'Precio total', value: `$${orderItem?.totalPrice}` },
   ];
 
   return (
@@ -23,7 +23,7 @@ function MyOrder() {
         <Link to="/my-orders" className="absolute left-0">
           <ChevronLeftIcon className="size-6 text-green-800 cursor-pointer hover:text-green-950" />
         </Link>
-        <h1 className="text-2xl font-bold">My Order Details</h1>
+        <h1 className="text-2xl font-bold">Detalles de mi orden</h1>
       </div>
       <div className="flex flex-col w-80 mb-6 border-b border-green-600 p-6 text-green-950">
         {orderDetails.map(({ label, value }) => (

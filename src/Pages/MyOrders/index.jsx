@@ -11,7 +11,7 @@ function MyOrders() {
     <Layout>
       <div className="flex items-center justify-center relative w-80">
         <h1 className="text-2xl font-bold mb-10 mt-5 text-green-950">
-          My Orders
+          Mis ordenes
         </h1>
       </div>
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

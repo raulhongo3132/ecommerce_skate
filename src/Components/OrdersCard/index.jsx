@@ -16,7 +16,7 @@ const OrdersCard = (props) => {
         <p className="flex text-md">
           <ShoppingBagIcon className="size-6 mr-2" />
           <span>
-            {totalProducts} {totalProducts > 1 ? 'articles' : 'article'}
+            {totalProducts} {totalProducts > 1 ? 'artículos' : 'artculo'}
           </span>
         </p>
       </div>

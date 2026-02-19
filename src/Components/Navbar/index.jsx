@@ -17,6 +17,11 @@ const Navbar = () => {
   } = useContext(ShoppingCartContext);
   const activeStyle = 'underline underline-offset-4';
 
+  const userLinks = [
+    { label: "Mis órdenes", path: "/my-orders" },
+    { label: "Mi cuenta", path: "/my-account" }
+  ];
+
   // Menu Mobile
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -46,19 +51,21 @@ const Navbar = () => {
         <li className="text-white truncate max-w-[120px]">
           {account?.name}
         </li>
-        {['My Orders', 'My Account'].map((item) => (
-          <li key={item}>
+
+        {userLinks.map((item) => (
+          <li key={item.path}>
             <NavLink
-              to={`/${item.toLowerCase().replace(' ', '-')}`}
+              to={item.path}
               className={({ isActive }) =>
                 `hover:text-gray-300 ${isActive ? activeStyle : ''}`
               }
             >
-              {item}
+              {item.label}
             </NavLink>
           </li>
         ))}
-        <li key="Sign Out">
+
+        <li>
           <NavLink
             to="/sign-in"
             className={({ isActive }) =>
@@ -66,12 +73,13 @@ const Navbar = () => {
             }
             onClick={() => handleSignOut()}
           >
-            Sign Out
+            Cerrar sesión
           </NavLink>
         </li>
       </>
     );
   };
+
 
   const renderViewMobile = () => {
     return isUserSignOut ? (
@@ -89,18 +97,20 @@ const Navbar = () => {
       </li>
     ) : (
       <>
-        <li className="text-white place-self-end p-2">{account?.email}</li>
-        {['My Orders', 'My Account'].map((item) => (
-          <li key={item} className="w-full">
-            <NavLink
-              to={`/${item.toLowerCase().replace(' ', '-')}`}
-              onClick={() => setIsMenuOpen(false)}
-              className="block p-2 hover:bg-green-200 rounded-lg"
-            >
-              {item}
-            </NavLink>
-          </li>
-        ))}
+        <li className="text-white place-self-end p-2">{account?.name}</li>
+        {userLinks.map((item) => (
+        <li key={item.path}>
+          <NavLink
+            to={item.path}
+            className={({ isActive }) =>
+              `hover:text-gray-300 ${isActive ? activeStyle : ''}`
+            }
+          >
+            {item.label}
+          </NavLink>
+        </li>
+      ))}
+
         <li key="Sign Out" className="w-full">
           <NavLink
             to="/sign-in"

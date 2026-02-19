@@ -32,7 +32,7 @@ function MyAccount() {
     return (
       <div className="flex flex-col gap-4 mt-10 w-80">
         <p className="w-full flex gap-2 items-center justify-between text-sm text-green-950">
-          <span className="font-semibold">Name: </span>
+          <span className="font-semibold">Nombre: </span>
           <span className="block text-sm text-green-950 bg-green-200 px-4 py-2 rounded-lg w-3/4 h-[36px] truncate">
             {account?.name}
           </span>
@@ -47,7 +47,7 @@ function MyAccount() {
           className="bg-green-400 text-green-950 rounded-lg px-4 py-2 w-full font-semibold mt-10"
           onClick={() => setView('edit-user-info')}
         >
-          Edit
+          Editar
         </button>
       </div>
     );
@@ -58,7 +58,7 @@ function MyAccount() {
       <form ref={form} className="flex flex-col gap-4 mt-10 w-80">
         <div className="flex flex-col gap-1 text-sm text-green-950">
           <label htmlFor="name" className="font-semibold">
-            Name:
+            Nombre:
           </label>
           <input
             type="text"
@@ -84,7 +84,7 @@ function MyAccount() {
         </div>
         <div className="flex flex-col gap-1 mb-10 text-sm text-green-950 ">
           <label htmlFor="password" className="font-semibold">
-            Password:
+            Contraseña:
           </label>
           <input
             type="password"
@@ -101,7 +101,7 @@ function MyAccount() {
             handleEditAccount(event);
           }}
         >
-          Edit
+          Editar
         </button>
       </form>
     );
@@ -113,7 +113,7 @@ function MyAccount() {
   return (
     <Layout>
       <h1 className="text-2xl font-bold mt-5 mb-6 text-green-950">
-        My Account
+        Mi cuenta
       </h1>
       {renderView()}
     </Layout>
