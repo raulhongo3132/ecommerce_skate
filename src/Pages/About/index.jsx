@@ -8,16 +8,14 @@ function About() {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto mt-10 text-black space-y-8">
+      <div  style={{textAlign: 'justify', padding: '15px', margin: '0 3 0 3'}} className="max-w-4xl mx-auto mt-10 text-black space-y-8">
 
         <h1 className="text-3xl font-bold">
           Skate and Destroy: ¿Quiénes Somos?
         </h1>
 
         <p className="text-black leading-relaxed">
-          En Skate and Destroy somos una tienda especializada en skateboarding enfocada en ofrecer
-          productos de alta calidad para riders urbanos. Nuestro objetivo es
-          brindar una experiencia de compra simple, clara y accesible.
+          En Skate and Destroy somos una tienda especializada en skateboarding enfocada en ofrecer productos de alta calidad para riders urbanos. Nuestro objetivo es brindar una experiencia de compra simple, clara y accesible.
         </p>
 
         <section className="space-y-4">

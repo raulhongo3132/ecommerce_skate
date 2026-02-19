@@ -8,7 +8,7 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="max-w-4xl mx-auto mt-16 text-white space-y-8">
+      <div style={{textAlign: 'justify', padding: '15px', margin: '0 3 0 3'}}  className="max-w-4xl mx-auto mt-16 text-white space-y-8">
 
         {/* Título */}
         <h1 className="text-4xl font-bold text-black text-center">
@@ -16,15 +16,57 @@ const Contact = () => {
         </h1>
 
         {/* Información */}
-        <div className="bg-gray-900 p-6 rounded-xl space-y-3 shadow-md">
-          <p className="text-gray-300 font-medium">
-            skt-dstry@skateshop.com
-          </p>
+          <div className="bg-gray-900 p-6 rounded-xl space-y-5 shadow-md">
+            <p className="text-gray-300 font-medium">
+              skt-dstry@skateshop.com
+            </p>
 
-          <p className="text-gray-400">
-            Tecnológico Nacional de México Campus Iztapalapa
-          </p>
-        </div>
+            <form className="space-y-4 text-gray-300">
+              
+              <div className="flex flex-col space-y-1">
+                <label className="text-sm">Nombre</label>
+                <input
+                  type="text"
+                  className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 
+                            focus:outline-none focus:ring-2 focus:ring-white/20 
+                            focus:border-gray-500 transition"
+                  placeholder="Tu nombre"
+                />
+              </div>
+
+              <div className="flex flex-col space-y-1">
+                <label className="text-sm">Correo</label>
+                <input
+                  type="email"
+                  className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 
+                            focus:outline-none focus:ring-2 focus:ring-white/20 
+                            focus:border-gray-500 transition"
+                  placeholder="correo@ejemplo.com"
+                />
+              </div>
+
+              <div className="flex flex-col space-y-1">
+                <label className="text-sm">Comentario</label>
+                <input
+                  type="text"
+                  className="bg-gray-800 border border-gray-700 rounded-lg px-3 py-2 
+                            focus:outline-none focus:ring-2 focus:ring-white/20 
+                            focus:border-gray-500 transition"
+                  placeholder="Escribe tus dudas"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-white text-black font-semibold py-2 rounded-lg
+                          hover:bg-gray-300 transition duration-200"
+              >
+                Enviar
+              </button>
+
+            </form>
+          </div>
+
 
         {/* Mapa */}
         <div className="rounded-xl overflow-hidden shadow-lg">
