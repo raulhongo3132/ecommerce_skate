@@ -94,6 +94,14 @@ function SignIn() {
         Iniciar sesión
       </button>
 
+      <button
+        type="button"
+        onClick={() => navigate('../Admin')}
+        className="bg-black text-white rounded-lg px-4 py-2 w-full font-semibold"
+      >
+        Iniciar sesión como Admin
+      </button>
+
       <span
         onClick={() => setView('recover')}
         className="text-sm text-center text-green-700 underline underline-offset-4 cursor-pointer hover:text-green-950"
