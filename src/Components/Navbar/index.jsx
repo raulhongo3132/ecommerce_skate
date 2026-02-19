@@ -38,7 +38,7 @@ const Navbar = () => {
           }
           onClick={() => handleSignOut()}
         >
-          Sign In
+          Iniciar sesión
         </NavLink>
       </li>
     ) : (

@@ -45,7 +45,7 @@ const CheckoutSideMenu = () => {
       } top-[84px] md:top-[64px] lg:top-[68px] xl:top-[68px] w-full sm:w-[360px] md:w-[360px] lg:w-[360px] xl:w-[360px] h-[calc(100vh-84px)] sm:h-[calc(100vh-68px)] md:h-[calc(100vh-64px)] lg:h-[calc(100vh-68px)] xl:h-[calc(100vh-68px)] flex-col fixed bg-white text-green-950 right-0 border shadow-md`}
     >
       <div className="flex justify-between items-center px-6 py-4 ">
-        <h2 className="font-semibold text-xl">My Order</h2>
+        <h2 className="font-semibold text-xl">Carrito de compra</h2>
         <div>
           <XMarkIcon
             className="text-green-800 size-6 cursor-pointer hover:text-green-950"
@@ -67,7 +67,7 @@ const CheckoutSideMenu = () => {
             />
           ))
         ) : (
-          <p className="text-center text-lg font-light">Your cart is empty</p>
+          <p className="text-center text-lg font-light">Tu carrito está vacio</p>
         )}
       </div>
 
@@ -84,7 +84,7 @@ const CheckoutSideMenu = () => {
               className="w-full mt-4 bg-green-800 hover:bg-green-950 text-white font-medium px-4 py-2 rounded-lg"
               onClick={signOut ? closeCheckoutSideMenu : handleCheckout}
             >
-              Checkout
+              Comprar
             </button>
           </Link>
         </div>
