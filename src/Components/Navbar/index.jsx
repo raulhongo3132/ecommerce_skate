@@ -279,7 +279,7 @@ const Navbar = () => {
             </ul>
 
             {/* Sección usuario */}
-            <ul className="flex flex-col items-center gap-1 w-full pt-4 border-t border-gray-700">
+            <ul className="flex flex-col items-end gap-1 w-full pt-4 border-t border-gray-700">
               {renderViewMobile()}
             </ul>
           </div>

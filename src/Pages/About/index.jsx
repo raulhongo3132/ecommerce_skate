@@ -11,11 +11,11 @@ function About() {
       <div className="max-w-4xl mx-auto mt-10 text-black space-y-8">
 
         <h1 className="text-3xl font-bold">
-          Quiénes Somos
+          Skate and Destroy: ¿Quiénes Somos?
         </h1>
 
         <p className="text-black leading-relaxed">
-          Somos una tienda especializada en skateboarding enfocada en ofrecer
+          En Skate and Destroy somos una tienda especializada en skateboarding enfocada en ofrecer
           productos de alta calidad para riders urbanos. Nuestro objetivo es
           brindar una experiencia de compra simple, clara y accesible.
         </p>
