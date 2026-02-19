@@ -9,6 +9,7 @@ import SignIn from '../Pages/SignIn';
 import About from '../Pages/About';
 import Contact from '../Pages/Contact';
 import ProtectedRoute from '../Components/ProtectedRoute';
+import AdminDashboard from '../Pages/Admin/AdminDashboard';
 
 export const AppRoutes = () => {
   return useRoutes([
@@ -16,6 +17,7 @@ export const AppRoutes = () => {
     { path: '/:category', element: <Home /> },
     { path: '/about', element: <About /> },
     { path: '/contact', element: <Contact /> },
+    { path: '/admin', element: <AdminDashboard /> },
 
     {
       path: '/my-account',
@@ -41,6 +43,15 @@ export const AppRoutes = () => {
         </ProtectedRoute>
       ),
     },
+    {
+      path: '/my-orders/:id',
+      element: (
+        <ProtectedRoute>
+          <MyOrder />
+        </ProtectedRoute>
+      ),
+    },
+
     {
       path: '/my-orders/:id',
       element: (
