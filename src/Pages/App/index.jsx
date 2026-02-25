@@ -13,7 +13,7 @@ const App = () => {
     <ShoppingCartProvider>
       <BrowserRouter basename={basename_for_router}>
         <AppRoutes />
-        <Navbar />
+        
         <CheckoutSideMenu />
       </BrowserRouter>
     </ShoppingCartProvider>

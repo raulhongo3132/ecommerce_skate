@@ -80,7 +80,9 @@ const AdminDashboard = () => {
   };
 
   return (
+    
     <div className="min-h-screen bg-gray-950 text-gray-200 p-8 space-y-8">
+      <button onClick={() => navigate('../')}>Cerrar sesion</button>
       <h1 className="text-3xl font-bold">Panel Admin</h1>
 
       {/* Sección Productos */}
