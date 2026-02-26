@@ -1,0 +1,51 @@
+INSERT INTO Categoria (nombre) VALUES
+('tablas'),
+('trucks'),
+('ruedas'),
+('accesorios'),
+('otros');
+
+INSERT INTO Producto (categoria_id, nombre, descripcion, precio, stock)
+VALUES
+-- TABLAS
+((SELECT id FROM Categoria WHERE nombre='tablas'), 'Tabla Street 8.0', 'Tabla de maple 7 capas ideal para street.', 85.00, 15),
+((SELECT id FROM Categoria WHERE nombre='tablas'), 'Tabla Pro 8.25', 'Modelo profesional de alta resistencia.', 110.00, 10),
+((SELECT id FROM Categoria WHERE nombre='tablas'), 'Skate Completo 8.0', 'Tabla completa lista para usar.', 150.00, 8),
+
+-- TRUCKS
+((SELECT id FROM Categoria WHERE nombre='trucks'), 'Trucks 139mm', 'Ejes ligeros y resistentes.', 60.00, 20),
+((SELECT id FROM Categoria WHERE nombre='trucks'), 'Trucks 149mm', 'Mayor estabilidad en rampas.', 65.00, 18),
+
+-- RUEDAS
+((SELECT id FROM Categoria WHERE nombre='ruedas'), 'Ruedas 52mm 99A', 'Perfectas para skatepark.', 35.00, 25),
+((SELECT id FROM Categoria WHERE nombre='ruedas'), 'Ruedas 54mm 101A', 'Mayor velocidad y control.', 40.00, 22),
+((SELECT id FROM Categoria WHERE nombre='ruedas'), 'Rodamientos ABEC 9', 'Máximo rendimiento y precisión.', 30.00, 30),
+
+-- ACCESORIOS
+((SELECT id FROM Categoria WHERE nombre='accesorios'), 'Lija Negra', 'Máximo agarre y durabilidad.', 12.00, 40),
+((SELECT id FROM Categoria WHERE nombre='accesorios'), 'Tornillos 1”', 'Set completo de montaje.', 8.00, 50),
+((SELECT id FROM Categoria WHERE nombre='accesorios'), 'Herramienta Skate Universal', 'Herramienta multifuncional.', 18.00, 35),
+((SELECT id FROM Categoria WHERE nombre='accesorios'), 'Sticker Pack', 'Set de 10 stickers.', 10.00, 60),
+
+-- OTROS
+((SELECT id FROM Categoria WHERE nombre='otros'), 'Casco Skate', 'Protección certificada.', 45.00, 12),
+((SELECT id FROM Categoria WHERE nombre='otros'), 'Rodilleras Pro', 'Alta resistencia al impacto.', 38.00, 14),
+((SELECT id FROM Categoria WHERE nombre='otros'), 'Sudadera Skate', 'Ideal para clima fresco.', 60.00, 16);
+
+INSERT INTO ImagenProducto (producto_id, url, orden)
+VALUES
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQufOL2dwKqoLyG9GNBmMTsuZLveYVKjjBtLg&s', 1),
+(2, 'https://http2.mlstatic.com/D_NQ_NP_957535-MLM96675046962_112025-O.webp', 1),
+(3, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfCgI35cTSHpdV7CfKeZ0XJZOzFj3q9_XyFQ&s', 1),
+(4, 'https://http2.mlstatic.com/D_NQ_NP_731336-MLM84224132142_052025-O.webp', 1),
+(5, 'https://http2.mlstatic.com/D_NQ_NP_859598-MLM89847651730_082025-O.webp', 1),
+(6, 'https://http2.mlstatic.com/D_NQ_NP_601767-CBT83577346033_042025-O.webp', 1),
+(7, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6vNHFteMExhHTtITmmxhzrWAwyIFR9spklg&s', 1),
+(8, 'https://skateworld.com.mx/cdn/shop/files/abec7rollline.jpg', 1),
+(9, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPe-ywhw0bCvyiBhdgRkjkHLXMB4JCNN5RGg&s', 1),
+(10, 'https://m.media-amazon.com/images/I/61Zgr4qR6yL.jpg', 1),
+(11, 'https://i5.walmartimages.com/asr/c53e4908-16da-433b-b71f-20ea99cdc354.e95b65d8f047ebdd6a352cb9c0998e36.jpeg', 1),
+(12, 'https://m.media-amazon.com/images/I/81XWBl3LN-L.jpg', 1),
+(13, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw2pheN6bvs4SCyAWUWuSb8iFQn0AxxOorrg&s', 1),
+(14, 'https://fishbone.com.mx/cdn/shop/products/187proKnee-blk-blk.jpg', 1),
+(15, 'https://fishbone.com.mx/cdn/shop/files/SKATEMAG-BLACK-CREWNECK-1.webp?v=1688327808', 1);	
